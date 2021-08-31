@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "liberis-orchestration-hub.fullname" . }}
+  labels:
+    app: {{ template "liberis-orchestration-hub.name" . }}
+    chart: {{ template "liberis-orchestration-hub.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: Helm 
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "liberis-orchestration-hub.name" . }}
+    release: {{ .Release.Name }}

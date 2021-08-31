@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Liberis.OrchestrationHub.Application\Liberis.OrchestrationHub.Application.csproj" />
+    <ProjectReference Include="..\..\src\Liberis.OrchestrationHub.Core\Liberis.OrchestrationHub.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Liberis.Core.Common" Version="1.0.0-rc.16687" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.9" />
+    <PackageReference Include="NSubstitute" Version="4.2.2" />
+  </ItemGroup>
+
+</Project>
